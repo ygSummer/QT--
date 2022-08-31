@@ -34,6 +34,7 @@ class Stats():
         self.window=QUiLoader().load(os.path.join((os.path.dirname(__file__)),'ui\\stats.ui'))
 
         # 主窗口button按钮连接 主窗口文本信息 处理信息
+        # 用QT的术语来解释这行代码，就是：把button被点击（clicked）的信号（signal），连接（connect）到了handleCalc这样的一个 slot上
         self.window.button.clicked.connect(self.handleCalc)
 
         self.window.show()
